@@ -1,60 +1,34 @@
-const featuresDropdown = document.querySelector(".dropdown-content");
+const idArray = [];
 
-const companyDropdown = document.querySelector(".dropdown-content-c");
-
-let companySvg = document.getElementById("company-svg");
-companySvg.innerHTML = `<i class="fas fa-angle-down"></i>`;
-
-let featureSvg = document.getElementById("features-svg");
-featureSvg.innerHTML = `<i class="fas fa-angle-down"></i>`;
-
-function dropdownContent2() {
-  if (companySvg.innerHTML === `<i class="fas fa-angle-down"></i>`) {
-    companyDropdown.style.display = "flex";
-    companySvg.innerHTML = `<i class="fas fa-angle-up"></i>`;
-    return false;
+class GetId {
+  getId(...id) {
+    for (const props of id) {
+      const element = document.getElementById(props);
+      idArray.push(element);
+    }
   }
 
-  if (companySvg.innerHTML === `<i class="fas fa-angle-up"></i>`) {
-    companyDropdown.style.display = "none";
-    companySvg.innerHTML = `<i class="fas fa-angle-down"></i>`;
-    return false;
+  classToggler(id) {
+    id.onclick = () => {
+      return id.classList.toggle("add-remove");
+    };
   }
 }
 
-function dropdownContent() {
-  if (featureSvg.innerHTML === `<i class="fas fa-angle-down"></i>`) {
-    featuresDropdown.style.display = "flex";
-    featureSvg.innerHTML = `<i class="fas fa-angle-up"></i>`;
-    return false;
-  }
+const getElement = new GetId();
 
-  if (featureSvg.innerHTML === `<i class="fas fa-angle-up"></i>`) {
-    featuresDropdown.style.display = "none";
-    featureSvg.innerHTML = `<i class="fas fa-angle-down"></i>`;
-    return false;
-  }
-}
+getElement.getId("menu-bar", "features", "company", "close-bar", "nav");
 
-let menuBar = document.getElementById("menu-bar");
-let menuBar2 = document.getElementById("menu-bar2");
-let navLink = document.querySelector(".nav-wrapper");
-menuBar2.style.display = "none";
+const [mainBar, features, company, close, nav] = idArray;
 
-let isMenu = true;
-function getMenu() {
-  if (isMenu) {
-    menuBar.style.display = "none";
-    navLink.style.display = "flex";
-    menuBar2.style.display = "flex";
-    isMenu = false;
-    return isMenu;
-  }
-  if (!isMenu) {
-    navLink.style.display = "none";
-    menuBar.style.display = "flex";
-    menuBar2.style.display = "none";
-    isMenu = true;
-    return false;
-  }
-}
+getElement.classToggler(features);
+getElement.classToggler(company);
+getElement.classToggler(mainBar);
+
+mainBar.onclick = () => {
+  nav.style.display = "flex";
+};
+
+close.onclick = () => {
+  nav.style.display = "none";
+};

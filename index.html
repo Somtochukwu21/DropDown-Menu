@@ -16,79 +16,165 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header-wrapper">
-        <div class="header-logo">
-          <img src="./assets/images/logo.svg" alt="Snap Logo" />
-        </div>
-        <div class="backgroundshine">
-          <nav>
-            <div class="nav-bar">
-              <img src="./assets/images/icon-menu.svg" alt="" />
+    <div class="original">
+      <div class="wrapper">
+        <header class="header-wrapper">
+          <div class="header-logo">
+            <img src="./assets/images/logo.svg" alt="Snap Logo" />
+          </div>
+
+          <div id="menu-bar">
+            <img src="./assets/images/icon-menu.svg" alt="" class="open" />
+          </div>
+
+          <nav id="nav">
+            <div id="close-bar">
+              <img
+                src="./assets/images/icon-close-menu.svg"
+                alt=""
+                class="close"
+              />
             </div>
+
             <div class="nav-links">
-              <ul class="ul-list">
-                <li>
-                  Features <img src="./assets/images/icon-arrow-down.svg" alt="Down Arrow Logo" srcset="" class="arrow">
-                  <ul class="drop-items">
-                    <li>
+              <div class="navigation">
+                <div>
+                  <div id="features" class="">
+                    <p>Features</p>
+                    <div>
+                      <img
+                        src="./assets/images/icon-arrow-down.svg"
+                        alt="Down Arrow Logo"
+                        srcset=""
+                        class="arrowdown"
+                      />
+                      <img
+                        src="./assets/images/icon-arrow-up.svg"
+                        alt=""
+                        class="arrowup"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="drop-items">
+                    <div>
                       <img
                         src="./assets/images/icon-todo.svg"
                         alt="TodoList Logo"
                       />
                       <span> TodoList </span>
-                    </li>
-                    <li>
+                    </div>
+
+                    <div>
                       <img
                         src="./assets/images/icon-calendar.svg"
-                        alt="Calender Logo"
+                        alt="TodoList Logo"
                       />
-                      <span> calendar </span>
-                    </li>
-                    <li>
+                      <span> calender </span>
+                    </div>
+
+                    <div>
                       <img
                         src="./assets/images/icon-reminders.svg"
-                        alt="Reminders Logo"
+                        alt="TodoList Logo"
                       />
                       <span> reminders </span>
-                    </li>
-                    <li>
+                    </div>
+
+                    <div>
                       <img
                         src="./assets/images/icon-planning.svg"
-                        alt="Planning Logo"
+                        alt="TodoList Logo"
                       />
                       <span> planning </span>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  company <img src="./assets/images/icon-arrow-down.svg" alt="Arrow Down Logo" srcset="" class="arrow">
-                  <ul class="drop-items"> 
-                    <li>history</li>
-                    <li>our team</li>
-                    <li>blog</li>
-                  </ul>
-                </li>
-                <li>careers</li>
-                <li>about</li>
-              </ul>
-              <ul class="ul-list">
-                <li>login</li>
-                <li>register</li>
-              </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div id="company">
+                    <p>company</p>
+                    <div>
+                      <img
+                        src="./assets/images/icon-arrow-down.svg"
+                        alt="Down Arrow Logo"
+                        srcset=""
+                        class="arrowdown"
+                      />
+                      <img
+                        src="./assets/images/icon-arrow-up.svg"
+                        alt=""
+                        class="arrowup"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="drop-items">
+                    <div>history</div>
+                    <div>our team</div>
+                    <div>blog</div>
+                  </div>
+                </div>
+
+                <div>careers</div>
+                <div>about</div>
+              </div>
+              <div class="navigation">
+                <div>login</div>
+                <div class="button"><button>register</button></div>
+              </div>
             </div>
           </nav>
-        </div>
-      </header>
+        </header>
 
-      <div class="container"></div>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="mailto:lyon4197@gmail.com">Praiz Lighbringer.</a>
+        <div class="container">
+          <div class="images">
+            <div class="mobile-image">
+              <img
+                src="./assets/images/image-hero-mobile.png"
+                alt="Image Hero"
+              />
+            </div>
+
+            <div class="desktop-image">
+              <img
+                src="./assets/images/image-hero-desktop.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+
+          <div class="texts-svg">
+            <div class="texts">
+              <h1>Make remote work</h1>
+              <p>
+                Get your team in sync, no matter your location. Streamline
+                processes, create team rituals, and watch productivity soar.
+              </p>
+              <div class="button secondbutton">
+                <button>learn more</button>
+              </div>
+            </div>
+            <div class="svg-wrapper">
+              <div><img src="./assets/images/client-databiz.svg" alt="" /></div>
+              <div>
+                <img src="./assets/images/client-audiophile.svg" alt="" />
+              </div>
+              <div><img src="./assets/images/client-meet.svg" alt="" /></div>
+              <div><img src="./assets/images/client-maker.svg" alt="" /></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="mailto:lyon4197@gmail.com">Praiz Lighbringer.</a>
+        </div>
       </div>
     </div>
-    <script src="./assets/javascript/main.js"></script>
+    <script type="module" src="./assets/javascript/main.js"></script>
   </body>
 </html>
