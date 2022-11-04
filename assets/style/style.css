@@ -178,18 +178,22 @@ ul {
 .texts-svg {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
     height: 100%;
     margin-top: 1.5em;
 }
 
-.texts {
+.texts  {
     text-align: center;
     display: flex;
     flex-flow: column;
     gap: 1em;
 }
-
+ 
+.secondbutton{
+    margin-top: 1em;
+}
+ 
 .secondbutton button {
     color: var(--almost-white);
     background: #000;
@@ -239,6 +243,9 @@ p {
         width: 100%;
         padding: 0;
     }
+        .secondbutton {
+            margin-top: 0;
+        }
 
     .container {
         margin-top: 0.5em;
