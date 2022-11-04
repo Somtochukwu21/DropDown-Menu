@@ -40,7 +40,7 @@ ul {
 }
 
 .container {
-    --max-width: 830px;
+    --max-width: 900px;
     --hr-padding: 1.5rem;
     width: min(var(--max-width), 100%);
     margin-inline: auto;
@@ -70,6 +70,7 @@ ul {
     display: none;
     top: 0;
     width: 50%;
+    color: var(--almost-black);
     flex-direction: column;
     padding: 1rem;
     text-transform: capitalize;
@@ -119,7 +120,9 @@ ul {
 #company {
     display: flex;
     gap: 1em;
+    position: relative;
     align-items: center;
+    color: var(--almost-black);
 }
 
 .arrowup {
@@ -148,20 +151,19 @@ ul {
     outline: none;
     width: 100%;
     padding: 1rem;
-    border-radius: 1.5em;
+    border-radius: 0.6em;
     font-size: 16px;
     text-transform: capitalize;
-    -webkit-border-radius: 1.5em;
-    -moz-border-radius: 1.5em;
-    color: black;
-    -ms-border-radius: 1.5em;
-    -o-border-radius: 1.5em;
+    -webkit-border-radius: 0.6em;
+    -moz-border-radius: 0.6em;
+    color: var(--almost-black);
+    -ms-border-radius: 0.6em;
+    -o-border-radius: 0.6em;
 }
 
-/*
-.mobile-image {
-
-}*/
+.desktop-image {
+    display: none;
+}
 
 .mobile-image img {
     height: 100%;
@@ -169,7 +171,8 @@ ul {
 }
 
 .desktop-image img {
-    display: none;
+    width: 400px;
+    height: 500px;
 }
 
 .texts-svg {
@@ -191,11 +194,6 @@ ul {
     color: var(--almost-white);
     background: #000;
     width: 150px;
-    border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
-    -ms-border-radius: 0.5em;
-    -o-border-radius: 0.5em;
 }
 
 .svg-wrapper {
@@ -215,11 +213,15 @@ ul {
     margin-top: 1em;
 }
 
+p {
+    color: var(--almost-black);
+}
+
 @media (min-width:50em) {
 
     .header-wrapper {
-        background: red;
-            width: 100%;
+        width: 100%;
+        gap: 1em;
     }
 
     .header-logo {
@@ -235,8 +237,11 @@ ul {
         position: static;
         display: flex;
         width: 100%;
-        /* height: auto; */
-    padding: 0;
+        padding: 0;
+    }
+
+    .container {
+        margin-top: 0.5em;
     }
 
     #close-bar {
@@ -254,13 +259,81 @@ ul {
     }
 
     .nav-links,
-    .navigation,
-    .drop-items {
+    .navigation {
+        align-items: center;
         flex-flow: row;
+        gap: 1.5em;
     }
 
-    .button>button{
-        /* height: 0; */
+    .drop-items {
+        position: absolute;
+        padding: 0.5em;
+        border-radius: 0.5em;
+        gap: 0.7em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        background: var(--almost-white);
+        padding: 0.8em;
     }
-   
+
+    .df {
+        transform: translateX(-45px);
+        -webkit-transform: translateX(-45px);
+        -moz-transform: translateX(-45px);
+        -ms-transform: translateX(-45px);
+        -o-transform: translateX(-45px);
+    }
+
+    .button>button {
+        padding: 0.5em;
+        width: 100px;
+
+    }
+
+    .mobile-image {
+        display: none;
+    }
+
+    .desktop-image {
+        display: flex;
+    }
+
+    .container-child {
+        gap: 1em;
+        flex-flow: row-reverse;
+        align-items: center;
+        display: flex;
+    }
+
+    .texts {
+        text-align: left;
+        display: flex;
+        flex-flow: column;
+        line-height: 23px;
+        gap: 2em;
+    }
+
+    #features,
+    #company {
+        gap: 0.6em;
+    }
+
+    .texts-svg {
+        margin-top: 5em;
+        gap: 4em;
+        justify-content: center;
+    }
+
+    .text-header h1 {
+        display: flex;
+        flex-flow: column;
+        gap: 0.5em;
+        font-family: BoldE;
+        font-size: 3.7rem;
+    }
+
+    .svg-wrapper {
+        justify-content: stretch;
+        gap: 1em;
+        display: flex;
+    }
 }
